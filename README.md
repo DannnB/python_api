@@ -24,3 +24,20 @@ An API for something
 10. `pip install simplejson`
 11. `flask run` this should run the server on port 5000 (default)
 12. Build away!
+
+## GIT CMD STEPS
+To see your local changes unstaged/staged(eg set with `git commit`)
+
+
+#### To get changes
+1. `git pull`
+
+#### To Push (add) changes
+1. `git add FILENAME` or `git add -A` to add all
+2. `git commit -m "your message here"`
+3. `git pull`
+
+
+## Routes
+- `/` home page
+    -`/<name>` test dynamic param to html
