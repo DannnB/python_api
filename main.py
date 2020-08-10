@@ -1,14 +1,15 @@
 import os
 import settings
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
+#hi
 
 @app.route('/')
-def root():
-    return 'Returning some data...'
-
+@app.route('/<name>')
+def home(name=None):
+    return render_template('home.html', name=name)
 
 @app.route('/users', methods=['GET'])
 def users():
