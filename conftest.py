@@ -1,9 +1,9 @@
 import pytest
-from main import app as client
+from main import app
 
 @pytest.fixture
-def app():
-    app = client()
+def client():
+    app = app()
     return app
 
 def test_app(app):
