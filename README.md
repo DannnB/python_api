@@ -40,4 +40,36 @@ To see your local changes unstaged/staged(eg set with `git commit`)
 
 ## Routes
 - `/` home page
-    -`/<name>` test dynamic param to html
+    - `/<name>` test dynamic param to html
+
+
+## How to make a "Route"
+
+`@app.route('/about')` this creates the url endpoint: localhost:5000/about
+To return a HTML page:
+
+```
+def about():
+    return render_template('about.html')
+```
+
+Add a file called `about.html` in `templates` 
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <h1>About</h1>
+    <p>This is the about page</p>
+</body>
+</html>
+```
+
+Go to `localhost:5000/about` and you should see your page
+
+You can create HTML pages like this or return data in JSON. Example `/users` in `main.py`
