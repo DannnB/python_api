@@ -35,7 +35,7 @@ To see your local changes unstaged/staged(eg set with `git commit`)
 #### To Push (add) changes
 1. `git add FILENAME` or `git add -A` to add all
 2. `git commit -m "your message here"`
-3. `git pull`
+3. `git push`
 
 
 ## Routes
