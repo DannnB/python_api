@@ -7,6 +7,9 @@ An API for something
     - https://simplejson.readthedocs.io/en/latest/
     - https://github.com/theskumar/python-dotenv#readme
     - https://pythonhosted.org/watchdog/
+- jinja templates for html views 
+    - https://flask.palletsprojects.com/en/1.1.x/quickstart/#rendering-templates
+    - https://jinja.palletsprojects.com/en/2.11.x/templates/
 
 ## Steps to install
 1. `git clone https://github.com/DannnB/python_api.git`
