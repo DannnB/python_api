@@ -1,6 +1,8 @@
+from itertools import count
 import matplotlib.pyplot as plt
-import numpy as numpy
-import random
-import itertools import count
+import pandas as pd
+import requests
 
-    
+result=requests.get()
+result.json
+
