@@ -1,7 +1,7 @@
 import os
 import settings
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 #hi
@@ -13,6 +13,9 @@ def home(name=None):
 
 @app.route('/users', methods=['GET'])
 def users():
+    searchId = request.args.get('id', '')
+    print(searchId)
+    # TODO: add search of database to find user
     return jsonify({
         'users': [
             {
