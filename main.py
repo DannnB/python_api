@@ -4,12 +4,18 @@ import settings
 from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
-#hi
 
 @app.route('/')
-@app.route('/<name>')
-def home(name=None):
-    return render_template('home.html', name=name)
+def home():
+    return render_template('pages/home.html')
+
+@app.route('/login', methods=["POST", "GET"])
+def login():
+    return render_template('pages/login.html')
+
+@app.route('/users/<usr>')
+def user(usr):
+    return render_template('pages/profile.html',usr=usr)
 
 @app.route('/users', methods=['GET'])
 def users():
@@ -24,7 +30,6 @@ def users():
             }
         ]
     })
-
 
 if __name__ == '__main__':
     app.run(debug=True)
