@@ -9,13 +9,23 @@ app = Flask(__name__)
 def home():
     return render_template('pages/home.html')
 
+
+@app.route('/about')
+def about():
+    return render_template('pages/about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('pages/contact.html')
+
 @app.route('/login', methods=["POST", "GET"])
 def login():
     return render_template('pages/login.html')
 
 @app.route('/users/<usr>')
 def user(usr):
-    return render_template('pages/profile.html',usr=usr)
+    return render_template('pages/profile.html',zebra=usr)
+
 
 @app.route('/users', methods=['GET'])
 def users():
