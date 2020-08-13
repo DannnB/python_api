@@ -14,9 +14,13 @@ def home():
 def about():
     return render_template('pages/about.html')
 
-@app.route('/contact')
+@app.route('/contacts')
 def contact():
     return render_template('pages/contact.html')
+
+@app.route('/T&Cs')
+def tandcs():
+    return render_template('pages/tandcs.html')
 
 @app.route('/login', methods=["POST", "GET"])
 def login():
