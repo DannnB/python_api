@@ -9,7 +9,6 @@ app = Flask(__name__)
 def home():
     return render_template('pages/home.html')
 
-
 @app.route('/about')
 def about():
     return render_template('pages/about.html')
@@ -18,7 +17,7 @@ def about():
 def contact():
     return render_template('pages/contact.html')
 
-@app.route('/T&Cs')
+@app.route('/terms-and-conditions')
 def tandcs():
     return render_template('pages/tandcs.html')
 
