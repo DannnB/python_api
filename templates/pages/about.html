@@ -2,44 +2,36 @@
 {% block title %}About{% endblock %}
 
 {%block content %}
-
+<style>
+    .container {
+      position: relative;
+    }
+    
+    .images {
+      position: absolute;
+      top: 200px;
+      left: 500px;
+      font-size: 60px;
+    }
+    
+    img { 
+      width: 100%;
+      height: auto;
+      opacity: 1.00;
+    }
+    </style>
 <div class="container">
-    <h1>About</h1>
-    <!-- 
-      Had to change the p1 tags to just p. As paragraphs are the same basic block. Text is text. 
-      h1, h2, h3 etc has a lot more uses so are numbered. Headers can be subheads and section headers so sizes are needed.
-      <p1 style = "font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:75px;">below is what we do<br>how did i do</p1> 
-
-      removed spacing inbetween the 'style = "..."' for best pratice
-      Although, this is called "inline css" and should be avoid and put into a CSS file 
-    -->
+    <h1>about</h1>
     <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size:75px;">below is what we do<br>how did i do
     </p>
-
-    <!-- 
-      removed the text out of a <pre> tag which means preformatted wich is good for showing code on frontend visual
-      Guessing a typo
-      <pre>
-     -->
-    <p>Since (date) we have been producing xxxx for the xxx market and have<br>become world leaders in the xxxxx industry
-    </p>
+    <p2>since (date) we have been producing xxxx for the xxx market and have
+        <br>
+        become world leaders in the xxxxx industry
+    </p2>
     
-    <!-- 
-      change the below code to be "semantic" and valid HTML
-      <body style background="background-color:pink;"></body>
     <body>
-        <div class="images">
-        <img src="/static/lol.png" alt="lol" width="1000" height="1000">
+     <div class="images">
+        <img src="/static/lol.png" alt="lol">
     </body>
-     -->
-  <section style="background: pink;">
-    <div class="images">
-      <!-- 
-        removed the width and height attributes for best pratice. Image sizes should be set in a CSS file if you can
-        <img src="/static/lol.png" alt="lol" width="1000" height="1000">
-       -->
-      <img src="/static/lol.png" alt="lol">
-    </div>
-  </section>
 </div>
 {% endblock %}
